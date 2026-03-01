@@ -148,6 +148,7 @@ function Divider() {
 
 // ─── Page ───────────────────────────────────────────────────────────────────
 export default function Home() {
+  const [videoStarted, setVideoStarted] = useState(false);
   return (
     <>
       <main className="min-h-screen pb-36 md:pb-0">
@@ -193,25 +194,43 @@ export default function Home() {
             <CtaButton size="lg" />
 
             <p className="text-xs text-[var(--text-muted)]">
-              Nessun contratto. Cancella quando vuoi.
+              Valore Garantito.
             </p>
 
-            {/* VSL Video Placeholder */}
+            {/* VSL Video */}
             <div className="w-full mt-4 rounded-2xl overflow-hidden border border-dark-goldenrod/30 shadow-[0_0_40px_rgba(174,133,46,0.15)]">
               <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
-                <div className="absolute inset-0 bg-[var(--bg-card)] flex flex-col items-center justify-center gap-4">
-                  {/* Pulsing play button */}
+                {videoStarted ? (
+                  <iframe
+                    src="https://player.vimeo.com/video/1169288772?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+                    title="Audit Luciano"
+                  />
+                ) : (
                   <button
                     aria-label="Riproduci il video"
-                    className="group relative w-20 h-20 rounded-full btn-neon flex items-center justify-center focus:outline-none focus-visible:ring-4 focus-visible:ring-dark-goldenrod"
+                    onClick={() => setVideoStarted(true)}
+                    className="absolute inset-0 w-full h-full bg-[var(--bg-card)] flex flex-col items-center justify-center gap-4 focus:outline-none focus-visible:ring-4 focus-visible:ring-dark-goldenrod"
+                    style={{
+                      backgroundImage: "url('/video-thumbnail.jpg')",
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                    }}
                   >
-                    <span className="absolute inline-flex h-full w-full rounded-full bg-dark-goldenrod opacity-30 animate-ping" />
-                    <Play className="w-8 h-8 text-white fill-white translate-x-0.5" />
+                    {/* Dark overlay so the play button stays legible over the thumbnail */}
+                    <span className="absolute inset-0 bg-black/40" aria-hidden="true" />
+                    <span className="group relative z-10 w-20 h-20 rounded-full btn-neon flex items-center justify-center">
+                      <span className="absolute inline-flex h-full w-full rounded-full bg-dark-goldenrod opacity-30 animate-ping" />
+                      <Play className="w-8 h-8 text-white fill-white translate-x-0.5" />
+                    </span>
+                    <span className="relative z-10 text-sm text-[var(--text-primary)] font-medium tracking-wide uppercase">
+                      Guarda il video · 3 min
+                    </span>
                   </button>
-                  <span className="text-sm text-[var(--text-muted)] font-medium tracking-wide uppercase">
-                    Guarda il video · 3 min
-                  </span>
-                </div>
+                )}
               </div>
             </div>
           </div>
