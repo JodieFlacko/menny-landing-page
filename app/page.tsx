@@ -20,13 +20,16 @@ import {
   Shield,
   ChevronDown,
   Sparkles,
+  Pen,
+  RefreshCw,
+  TrendingUp,
 } from "lucide-react";
 
 const CTA_URL = "https://whop.com/checkout-placeholder";
 
 // ─── Reusable CTA Button ────────────────────────────────────────────────────
 function CtaButton({
-  label = "Unisciti alla Mentorship",
+  label = "Inizia la tua trasformazione",
   fullWidth = false,
   size = "default",
 }: {
@@ -170,22 +173,20 @@ export default function Home() {
             {/* H1 */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black leading-[1.05] tracking-tight">
               <span className="gradient-text">
-                Diventa un Designer
+                Il tuo gusto è già
                 <br />
-                Professionista
+                Premium.
               </span>
               <br />
               <span className="text-[var(--text-primary)]">
-                in 90 Giorni — Garantito.
+              Il tuo lavoro deve esserlo.
               </span>
             </h1>
 
             {/* Subheadline */}
             <p className="text-lg sm:text-xl text-[var(--text-secondary)] leading-relaxed max-w-xl">
-              Smetti di girare in tondo su YouTube. Con questa mentorship
-              one&#8209;to&#8209;one costruirai un portfolio che attira clienti,
-              imparerai le strategie che i pro non condividono e inizierai a
-              fatturare prima di quanto credi.
+            Sai riconoscere un design eccellente. Il problema è che il tuo non lo sembra ancora. 
+            Questo mentorship 1:1 ti dà il sistema per colmare quel divario, in 6 settimane.
             </p>
 
             {/* CTA */}
@@ -227,10 +228,10 @@ export default function Home() {
                 Ti Riconosci?
               </p>
               <h2 className="text-3xl sm:text-4xl font-black text-[var(--text-primary)] leading-tight">
-                Il Problema di{" "}
-                <span className="gradient-text">Quasi Ogni Designer</span>
+                Non è mancanza di {" "}
+                <span className="gradient-text">talento.</span>
                 <br />
-                che Vuole Crescere
+                È cecità strutturale.
               </h2>
             </div>
 
@@ -239,18 +240,18 @@ export default function Home() {
               <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide">
                 <PainCard
                   icon={<TrendingDown className="w-5 h-5" />}
-                  title="Impari tanto, guadagni poco"
-                  body="Segui corsi su corsi, guardi ore di tutorial, ma il tuo portfolio è fermo e i clienti non arrivano. Tutta teoria, zero risultati concreti."
+                  title="Qualcosa non funziona"
+                  body="Hai passato ore su Behance e Dribbble. Hai comprato corsi, template, pack di asset. Hai guardato tutorial su tutorial. Eppure, quando apri un file vuoto, qualcosa non funziona. Il risultato finale sembra sempre... quasi buono. Ma non abbastanza. E non sai perché."
                 />
                 <PainCard
                   icon={<Clock className="w-5 h-5" />}
-                  title="Perdi anni a sbagliare da solo"
-                  body="Senza una guida che ha già percorso la strada, sprechi mesi su errori che un mentor avrebbe risolto in cinque minuti di feedback."
+                  title="Non è mancanza di talento"
+                  body="Ecco la verità che nessun corso ti ha mai detto: il problema non è il tuo occhio. Il tuo gusto è già buono, forse anche ottimo. Il problema è che nessuno ti ha mai insegnato lo scheletro invisibile che regge ogni design professionale. Hai imparato a usare i software, ma non i principi che trasformano un layout in qualcosa di solido, intenzionale, premium. Stai costruendo case senza fondamenta. E lo senti."
                 />
                 <PainCard
                   icon={<AlertCircle className="w-5 h-5" />}
-                  title="Non sai da dove cominciare"
-                  body="Il mercato è vasto: brand identity, UI, social media. Senza una direzione chiara rimani bloccato nel mezzo, senza specializzarti mai davvero."
+                  title="Non sei un impostore"
+                  body="Quella sensazione di essere un impostore, di non riuscire a difendere le tue scelte davanti a un cliente, di vedere altri designer avanzare mentre tu rimani fermo... non è colpa tua. È il risultato diretto di un sistema di formazione che insegna effetti visivi e trend, ma non il linguaggio reale del design. Nessuno ti ha mostrato come si costruisce una gerarchia tipografica solida, come si usa una griglia con precisione matematica, come si crea tensione visiva con intenzione. Finché non impari questo, continuerai a lavorare per tentativi."
                 />
                 {/* Spacer for last card peek */}
                 <div className="w-4 flex-shrink-0" aria-hidden />
@@ -303,52 +304,56 @@ export default function Home() {
           <div className="relative z-10 max-w-2xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-shadow-grey/60 border border-dark-goldenrod/40 rounded-full px-4 py-1.5 text-sm font-medium text-eggshell mb-6">
               <Lightbulb className="w-3.5 h-3.5" />
-              La Nuova Via
+              La Soluzione
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-black text-[var(--text-primary)] leading-tight mb-6">
-              Non È Questione di{" "}
-              <span className="line-through text-[var(--text-muted)]">
-                Talento
+              Esiste un{" "}
+              <span className="gradient-text">
+                Sistema.
               </span>
               <br />
-              È Questione di{" "}
-              <span className="gradient-text">Sistema</span>
+              E puoi{" "}
+              <span className="gradient-text">Impararlo.</span>
             </h2>
 
             <div className="space-y-5 text-[var(--text-secondary)] text-base leading-relaxed">
               <p>
-                I designer che guadagnano bene non sono necessariamente i più
-                talentuosi. Seguono un{" "}
+                I designer che producono lavori premium non hanno più talento di te.{" "}
                 <strong className="text-[var(--text-primary)]">
-                  metodo preciso e replicabile
+                  Hanno un metodo.{" "}
                 </strong>
-                : sanno quali nicchie pagano di più, come posizionarsi, come
-                presentare il proprio lavoro e come chiudere i clienti senza
-                sentirsene a disagio.
+                Sanno come costruire ogni composizione su una struttura invisibile ma precisa, fatta di griglie matematiche, 
+                scale tipografiche e allineamento ottico. Non scelgono i font "a occhio". 
+                Non spostano elementi finché "sembra giusto". <strong className="text-[var(--text-primary)]">Costruiscono con intenzione, ogni volta.{" "}</strong>
+                E il risultato si vede.
               </p>
               <p>
-                Il problema è che questo sistema non si insegna sui corsi
-                online. Si trasmette attraverso{" "}
+                Questo mentorship 1:1 è l'unico percorso che ti dà accesso diretto a quel metodo, 
+                applicato al tuo lavoro reale. Non video preregistrati. Non feedback generici.{" "}
                 <strong className="text-[var(--text-primary)]">
-                  feedback diretto, esperienza reale e una guida che ci è già
-                  passata
+                  Sessioni live, chirurgiche, costruite attorno ai tuoi progetti e alle tue lacune specifiche. {" "}
                 </strong>
-                .
+                Vedi esattamente dove il tuo layout perde coerenza, dove la tua tipografia manca di gerarchia, 
+                dove il tuo design smette di comunicare. E impari a correggerlo, una volta sola, per sempre.
               </p>
               <p>
-                Ecco perché ho creato questo percorso: per comprimere anni di
-                tentativi ed errori in un cammino strutturato, dove ogni passo è
-                calibrato sulla tua situazione specifica.
+                Immagina di aprire un file con chiarezza totale. Sai da dove iniziare. 
+                Sai perché ogni elemento è dove si trova. Presenti il tuo lavoro a un cliente e non aspetti la sua approvazione: la guidi. 
+                Il tuo portfolio non è più una raccolta di tentativi riusciti a metà.{" "}
+                <strong className="text-[var(--text-primary)]">
+                  È una serie di case study che parlano da soli, che attraggono clienti disposti a pagare per la qualità. {" "}
+                </strong>
+                Questo è il risultato di un sistema. E il sistema si impara.
               </p>
             </div>
 
             {/* Feature pills */}
             <div className="flex flex-wrap gap-3 mt-8">
               {[
-                "Metodo strutturato in 90 giorni",
+                "Metodo strutturato in 6 settimane",
+                "Sessioni live 1:1 chirurgiche",
                 "Feedback personalizzato",
-                "Nicchie ad alto reddito",
                 "Portfolio che converte",
                 "Acquisizione clienti",
               ].map((tag) => (
@@ -365,7 +370,7 @@ export default function Home() {
 
         <Divider />
 
-        {/* ── BLOCK 4: BRIDGE ──────────────────────────────────────────── */}
+        {/* ── BLOCK 4: PER CHI È ───────────────────────────────────────── */}
         <section className="relative px-4 py-12 md:py-20 overflow-hidden">
           <div
             aria-hidden
@@ -377,87 +382,71 @@ export default function Home() {
 
           <div className="relative z-10 max-w-2xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-shadow-grey/60 border border-dark-goldenrod/40 rounded-full px-4 py-1.5 text-sm font-medium text-eggshell mb-6">
-              <Layers className="w-3.5 h-3.5" />
-              Il Ponte verso la Soluzione
+              <Sparkles className="w-3.5 h-3.5" />
+              Per Chi È
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-black text-[var(--text-primary)] leading-tight mb-6">
-              E se Potessi Saltare{" "}
-              <span className="gradient-text">
-                i 3 Anni di Errori
-              </span>{" "}
-              che Ho Fatto Io?
+            <h2 className="text-3xl sm:text-4xl font-black text-[var(--text-primary)] leading-tight mb-10">
+              Questo percorso è{" "}
+              <span className="gradient-text">fatto per te</span>{" "}
+              se ti riconosci qui
             </h2>
 
-            <div className="space-y-5 text-[var(--text-secondary)] text-base leading-relaxed">
-              <p>
-                Ho passato anni a sbagliare prezzi, perdere clienti per
-                proposte sbagliate, costruire un portfolio che non comunicava
-                nulla di rilevante. Ho imparato nel modo più costoso: da solo,
-                a tentativi.
-              </p>
-              <p>
-                Poi ho trovato il metodo giusto. E nel giro di pochi mesi ho
-                trasformato la mia carriera:{" "}
-                <strong className="text-[var(--text-primary)]">
-                  clienti migliori, tariffe più alte, lavoro più soddisfacente
-                </strong>
-                .
-              </p>
-              <p>
-                Con questa mentorship ti metto direttamente nelle mani tutto
-                quello che avrei voluto sapere fin dall'inizio. Non teoria — un
-                percorso operativo, passo dopo passo, con me al tuo fianco a
-                guidarti in ogni fase.
-              </p>
-            </div>
-
-            {/* Before / After visual */}
-            <div className="mt-10 grid grid-cols-2 gap-4">
-              <div className="card-glow rounded-2xl p-5">
-                <p className="text-xs font-bold uppercase tracking-widest text-red-400/80 mb-3">
-                  Prima
-                </p>
-                <ul className="space-y-2.5 text-sm text-[var(--text-secondary)]">
-                  {[
-                    "Tutorial infiniti, zero direzione",
-                    "Portfolio generico e ignorato",
-                    "Prezzi troppo bassi per paura",
-                    "Clienti difficili e mal paganti",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-2">
-                      <span className="mt-0.5 text-red-500 flex-shrink-0">✕</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+            <div className="space-y-5">
+              {/* Persona 1 */}
+              <div className="card-glow rounded-2xl p-6 flex gap-5 items-start">
+                <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-dark-goldenrod/15 border border-dark-goldenrod/30 flex items-center justify-center">
+                  <Pen className="w-5 h-5 text-dark-goldenrod" />
+                </div>
+                <div>
+                  <h3 className="text-base font-bold text-[var(--text-primary)] mb-1.5">
+                    Designer freelance con buon gusto ma esecuzione incostante
+                  </h3>
+                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                    Produci lavori che sembrano quasi professionali, ma sai che
+                    manca qualcosa. Vuoi un metodo che ti permetta di
+                    raggiungere quel livello premium ogni volta, non solo per
+                    caso.
+                  </p>
+                </div>
               </div>
-              <div className="card-glow rounded-2xl p-5 border-dark-goldenrod/40">
-                <p className="text-xs font-bold uppercase tracking-widest text-dark-goldenrod mb-3">
-                  Dopo
-                </p>
-                <ul className="space-y-2.5 text-sm text-[var(--text-secondary)]">
-                  {[
-                    "Metodo chiaro e risultati misurabili",
-                    "Portfolio su nicchia che converte",
-                    "Tariffe da professionista",
-                    "Clienti ideali che ti cercano",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-2">
-                      <span className="mt-0.5 text-dark-goldenrod flex-shrink-0">✓</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
 
-            {/* CTA inside block */}
-            <div className="mt-10 flex flex-col items-center gap-3 text-center">
-              <CtaButton size="lg" />
-              <p className="text-sm text-[var(--text-muted)]">
-                Inizia oggi — i posti disponibili si esauriscono rapidamente.
-              </p>
+              {/* Persona 2 */}
+              <div className="card-glow rounded-2xl p-6 flex gap-5 items-start">
+                <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-dark-goldenrod/15 border border-dark-goldenrod/30 flex items-center justify-center">
+                  <RefreshCw className="w-5 h-5 text-dark-goldenrod" />
+                </div>
+                <div>
+                  <h3 className="text-base font-bold text-[var(--text-primary)] mb-1.5">
+                    Designer junior o mid-level bloccati nel ciclo delle
+                    revisioni
+                  </h3>
+                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                    I clienti continuano a chiederti modifiche senza fine e non
+                    riesci a difendere le tue scelte. Vuoi imparare a
+                    presentare il tuo lavoro con autorità e ridurre le
+                    revisioni alla radice.
+                  </p>
+                </div>
+              </div>
+
+              {/* Persona 3 */}
+              <div className="card-glow rounded-2xl p-6 flex gap-5 items-start">
+                <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-dark-goldenrod/15 border border-dark-goldenrod/30 flex items-center justify-center">
+                  <TrendingUp className="w-5 h-5 text-dark-goldenrod" />
+                </div>
+                <div>
+                  <h3 className="text-base font-bold text-[var(--text-primary)] mb-1.5">
+                    Designer che vogliono alzare le tariffe e attirare clienti
+                    migliori
+                  </h3>
+                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                    Sei stanco di competere sul prezzo. Vuoi costruire un
+                    portfolio che parli da solo e posizionarti come partner
+                    strategico, non come esecutore di pixel.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -466,7 +455,6 @@ export default function Home() {
 
         {/* ── BLOCK 5: VALUE PROPOSITION ───────────────────────────────── */}
         <section className="relative px-4 py-12 md:py-20 overflow-hidden">
-          {/* Background glow */}
           <div
             aria-hidden
             className="absolute right-0 top-0 w-80 h-80 rounded-full opacity-10 pointer-events-none"
@@ -478,64 +466,50 @@ export default function Home() {
           <div className="relative z-10 max-w-2xl mx-auto">
             <div className="mb-8 md:mb-12 text-center">
               <p className="text-sm font-semibold uppercase tracking-widest text-dark-goldenrod mb-3">
-                Cosa Impari
+                Cosa Ti Manca
               </p>
               <h2 className="text-3xl sm:text-4xl font-black text-[var(--text-primary)] leading-tight">
-                Tutto Quello che Ti Serve per{" "}
-                <span className="gradient-text">Diventare un Pro</span>
+                Il tuo gusto è già{" "}
+                <span className="gradient-text">premium</span>. Il tuo
+                processo no.
               </h2>
-              <p className="mt-4 text-[var(--text-secondary)] text-base leading-relaxed max-w-lg mx-auto">
-                Un percorso strutturato che copre ogni aspetto della carriera da
-                designer freelance — dalla tecnica alla gestione dei clienti.
-              </p>
             </div>
 
-            {/* Checkmark grid — 1 col on mobile, 2 col on md+ */}
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <ul className="space-y-4">
               {[
                 {
-                  title: "Portfolio su nicchia",
-                  body: "Costruisci un portfolio specializzato che parla direttamente ai clienti giusti e converte le visite in richieste.",
+                  icon: <Layers className="w-5 h-5 text-dark-goldenrod" />,
+                  title: "Un sistema, non istinto",
+                  body: `Smetti di affidarti a ciò che "sembra giusto." Impari a costruire ogni layout su una griglia matematica e una gerarchia tipografica precisa. Ogni scelta ha una ragione. Ogni ragione è difendibile.`,
                 },
                 {
-                  title: "Nicchie ad alto reddito",
-                  body: "Identifica i settori più redditizi per il tuo profilo e posizionati come lo specialista di riferimento.",
+                  icon: <Zap className="w-5 h-5 text-dark-goldenrod" />,
+                  title: "Critiche chirurgiche sul tuo lavoro reale",
+                  body: "Niente video preregistrati. Niente feedback generici. Ogni sessione live è dedicata al tuo progetto, ai tuoi punti ciechi, al tuo specifico divario tra visione ed esecuzione.",
                 },
                 {
-                  title: "Prezzi da professionista",
-                  body: "Imposta tariffe che riflettono il tuo valore reale, senza paura di perdere il cliente.",
+                  icon: <FileText className="w-5 h-5 text-dark-goldenrod" />,
+                  title: "Un portfolio che parla da solo",
+                  body: "In 6 settimane costruisci lavori che dimostrano un livello premium, non una collezione di template modificati. Il tipo di portfolio che attira clienti senza dover spiegare il tuo valore.",
                 },
                 {
-                  title: "Acquisizione clienti",
-                  body: "Un sistema di outreach testato e replicabile per trovare clienti costantemente, senza affidarti al passaparola.",
+                  icon: <MessageSquare className="w-5 h-5 text-dark-goldenrod" />,
+                  title: "Comanda la stanza, non solo il software",
+                  body: `Quando un cliente mette in discussione una tua scelta, non dici più "mi sembrava giusto." Spieghi esattamente perché quella decisione risolve il suo problema di business. Questo è ciò che separa un pixel-pusher da un consulente strategico.`,
                 },
-                {
-                  title: "Proposte che si vendono da sole",
-                  body: "Scrivi offerte commerciali chiare e persuasive che accompagnano il cliente verso il sì.",
-                },
-                {
-                  title: "Gestione revisioni e clienti",
-                  body: "Gestisci feedback, richieste fuori scope e clienti difficili con autorevolezza e protocolli chiari.",
-                },
-                {
-                  title: "Brand personale online",
-                  body: "Struttura la tua presenza sui social e sul web per attrarre opportunità in modo passivo.",
-                },
-                {
-                  title: "Automazione del flusso",
-                  body: "Identifica le operazioni ripetitive da automatizzare per lavorare meno ore guadagnando di più.",
-                },
-              ].map(({ title, body }) => (
+              ].map(({ icon, title, body }) => (
                 <li
                   key={title}
-                  className="card-glow rounded-2xl p-5 flex items-start gap-4"
+                  className="card-glow rounded-2xl p-6 flex items-start gap-5"
                 >
-                  <CheckCircle className="w-5 h-5 text-dark-goldenrod flex-shrink-0 mt-0.5" />
+                  <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-dark-goldenrod/15 border border-dark-goldenrod/30 flex items-center justify-center">
+                    {icon}
+                  </div>
                   <div>
-                    <p className="font-semibold text-[var(--text-primary)] text-sm mb-1">
+                    <p className="font-bold text-[var(--text-primary)] text-sm mb-1.5 uppercase tracking-wide">
                       {title}
                     </p>
-                    <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                    <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
                       {body}
                     </p>
                   </div>
@@ -560,76 +534,91 @@ export default function Home() {
           <div className="relative z-10 max-w-2xl mx-auto">
             <div className="mb-8 md:mb-12 text-center">
               <p className="text-sm font-semibold uppercase tracking-widest text-dark-goldenrod mb-3">
-                Cosa Dicono
+                Prove
               </p>
               <h2 className="text-3xl sm:text-4xl font-black text-[var(--text-primary)] leading-tight">
-                Risultati{" "}
-                <span className="gradient-text">Reali da Designer Reali</span>
+                Altri Designer hanno già{" "}
+                <span className="gradient-text">Fatto Questo Salto</span>
               </h2>
             </div>
 
-            {/* Mobile: swipeable carousel */}
-            <div className="md:hidden -mx-4 px-4">
-              <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide">
-                <TestimonialCard
-                  initials="MR"
-                  name="Marco R."
-                  role="Brand Designer, Milano"
-                  body="Dopo 2 mesi ho chiuso il mio primo cliente a 1.500€. Non pensavo fosse possibile così in fretta. Il metodo di acquisizione clienti che mi ha insegnato il mentor ha cambiato tutto."
-                />
-                <TestimonialCard
-                  initials="GT"
-                  name="Giulia T."
-                  role="UI/UX Designer, Roma"
-                  body="Non credevo di riuscire a specializzarmi così in fretta. Ora ho una nicchia precisa, un portfolio che converte e clienti che mi contattano invece del contrario."
-                />
-                <TestimonialCard
-                  initials="LM"
-                  name="Luca M."
-                  role="Graphic Designer, Torino"
-                  body="Il feedback diretto sulle mie proposte commerciali ha cambiato tutto. Finalmente capisco cosa vuole il mercato e come comunicare il mio valore senza sentirsene a disagio."
-                />
-                {/* Spacer */}
-                <div className="w-4 flex-shrink-0" aria-hidden />
+            {/* Testimonial cards — stacked on mobile */}
+            <div className="space-y-5">
+              <div className="card-glow rounded-2xl p-6">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-dark-goldenrod text-dark-goldenrod" />
+                  ))}
+                </div>
+                <p className="text-[var(--text-secondary)] text-base leading-relaxed mb-5 italic">
+                  "Dopo anni di tutorial, finalmente capisco perché il mio
+                  lavoro sembrava amatoriale. Non era talento. Era struttura."
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-full bg-shadow-grey/70 border border-dark-goldenrod/40 flex items-center justify-center flex-shrink-0">
+                    <span className="text-xs font-black text-eggshell">MR</span>
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-[var(--text-primary)]">
+                      Marco R.
+                    </p>
+                    <p className="text-xs text-[var(--text-muted)]">
+                      Graphic Designer Freelance
+                    </p>
+                  </div>
+                </div>
               </div>
-              {/* Scroll indicator dots */}
-              <div className="flex justify-center gap-1.5 mt-2" aria-hidden>
-                {[0, 1, 2].map((i) => (
-                  <span
-                    key={i}
-                    className={`block h-1.5 rounded-full transition-all ${i === 0 ? "w-4 bg-dark-goldenrod" : "w-1.5 bg-shadow-grey"}`}
-                  />
-                ))}
+
+              <div className="card-glow rounded-2xl p-6">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-dark-goldenrod text-dark-goldenrod" />
+                  ))}
+                </div>
+                <p className="text-[var(--text-secondary)] text-base leading-relaxed mb-5 italic">
+                  "Ho presentato il mio primo progetto post-mentorship a un
+                  cliente. Nessuna revisione. Ha approvato al primo round."
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-full bg-shadow-grey/70 border border-dark-goldenrod/40 flex items-center justify-center flex-shrink-0">
+                    <span className="text-xs font-black text-eggshell">GT</span>
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-[var(--text-primary)]">
+                      Giulia T.
+                    </p>
+                    <p className="text-xs text-[var(--text-muted)]">
+                      Brand Identity Designer
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Desktop: 3-col grid */}
-            <div className="hidden md:grid grid-cols-3 gap-5">
-              <TestimonialCard
-                initials="MR"
-                name="Marco R."
-                role="Brand Designer, Milano"
-                body="Dopo 2 mesi ho chiuso il mio primo cliente a 1.500€. Non pensavo fosse possibile così in fretta. Il metodo di acquisizione clienti che mi ha insegnato il mentor ha cambiato tutto."
-              />
-              <TestimonialCard
-                initials="GT"
-                name="Giulia T."
-                role="UI/UX Designer, Roma"
-                body="Non credevo di riuscire a specializzarmi così in fretta. Ora ho una nicchia precisa, un portfolio che converte e clienti che mi contattano invece del contrario."
-              />
-              <TestimonialCard
-                initials="LM"
-                name="Luca M."
-                role="Graphic Designer, Torino"
-                body="Il feedback diretto sulle mie proposte commerciali ha cambiato tutto. Finalmente capisco cosa vuole il mercato e come comunicare il mio valore senza sentirsene a disagio."
-              />
+            {/* Client logos strip */}
+            <div className="mt-12">
+              <p className="text-xs font-semibold uppercase tracking-widest text-[var(--text-muted)] text-center mb-6">
+                Brand e clienti con cui ho collaborato
+              </p>
+              <div className="flex flex-wrap items-center justify-center gap-6">
+                {["Brand A", "Brand B", "Brand C", "Brand D"].map((name) => (
+                  <div
+                    key={name}
+                    className="h-8 px-5 rounded-lg bg-shadow-grey/50 border border-dark-goldenrod/20 flex items-center justify-center"
+                  >
+                    <span className="text-xs font-bold text-[var(--text-muted)] tracking-wider uppercase">
+                      {name}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
         <Divider />
 
-        {/* ── BLOCK 7: MENTOR HISTORY ───────────────────────────────────── */}
+        {/* ── BLOCK 7: ORIGIN STORY ─────────────────────────────────────── */}
         <section className="relative px-4 py-12 md:py-20 overflow-hidden">
           <div
             aria-hidden
@@ -640,115 +629,120 @@ export default function Home() {
           />
 
           <div className="relative z-10 max-w-2xl mx-auto">
-            <div className="mb-8 text-center md:text-left">
+            <div className="mb-8">
               <div className="inline-flex items-center gap-2 bg-shadow-grey/60 border border-dark-goldenrod/40 rounded-full px-4 py-1.5 text-sm font-medium text-eggshell mb-6">
                 <Award className="w-3.5 h-3.5" />
-                Il Tuo Mentor
+                La Mia Storia
               </div>
               <h2 className="text-3xl sm:text-4xl font-black text-[var(--text-primary)] leading-tight">
-                Chi Ti Guiderà in{" "}
-                <span className="gradient-text">Questo Percorso</span>
+                Come Ho Capito Che Il Problema{" "}
+                <span className="gradient-text">Non Era Il Talento</span>
               </h2>
             </div>
 
-            {/* Mobile-first: image on top, bio below. md: side-by-side */}
-            <div className="flex flex-col md:flex-row md:items-start gap-8">
-              {/* Image placeholder */}
-              <div className="w-full md:w-64 md:flex-shrink-0">
-                <div className="relative w-full md:w-64 aspect-square rounded-2xl overflow-hidden border border-dark-goldenrod/30 shadow-[0_0_40px_rgba(174,133,46,0.15)]">
-                  <div className="absolute inset-0 bg-[var(--bg-card)] flex flex-col items-center justify-center gap-3">
-                    <div className="w-20 h-20 rounded-full bg-shadow-grey/70 border border-dark-goldenrod/40 flex items-center justify-center">
-                      <span className="text-3xl font-black text-eggshell select-none">
-                        M
-                      </span>
-                    </div>
-                    <span className="text-xs text-[var(--text-muted)] font-medium tracking-wide uppercase">
-                      Foto del Mentor
-                    </span>
-                  </div>
-                  {/* Decorative corner glow */}
-                  <div
-                    aria-hidden
-                    className="absolute -bottom-6 -right-6 w-32 h-32 rounded-full opacity-20 pointer-events-none"
-                    style={{
-                      background:
-                        "radial-gradient(circle, #AE852E, transparent 70%)",
-                    }}
-                  />
+            {/* Image placeholder */}
+            <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-dark-goldenrod/30 shadow-[0_0_40px_rgba(174,133,46,0.12)] mb-8">
+              <div className="absolute inset-0 bg-[var(--bg-card)] flex flex-col items-center justify-center gap-3">
+                <div className="w-16 h-16 rounded-full bg-shadow-grey/70 border border-dark-goldenrod/40 flex items-center justify-center">
+                  <span className="text-2xl font-black text-eggshell select-none">
+                    M
+                  </span>
                 </div>
+                <span className="text-xs text-[var(--text-muted)] font-medium tracking-wide uppercase">
+                  Foto autentica al lavoro
+                </span>
+              </div>
+              <div
+                aria-hidden
+                className="absolute -bottom-6 -right-6 w-32 h-32 rounded-full opacity-20 pointer-events-none"
+                style={{
+                  background:
+                    "radial-gradient(circle, #AE852E, transparent 70%)",
+                }}
+              />
+            </div>
 
-                {/* Quick stats below image */}
-                <div className="mt-4 grid grid-cols-3 gap-3 text-center">
-                  {[
-                    { value: "5+", label: "Anni di esperienza" },
-                    { value: "80+", label: "Studenti mentored" },
-                    { value: "€1M+", label: "Revenue generata" },
-                  ].map(({ value, label }) => (
-                    <div
-                      key={label}
-                      className="card-glow rounded-xl p-3 flex flex-col gap-1"
-                    >
-                      <span className="text-lg font-black gradient-text leading-none">
-                        {value}
-                      </span>
-                      <span className="text-[10px] text-[var(--text-muted)] leading-tight">
-                        {label}
-                      </span>
-                    </div>
-                  ))}
-                </div>
+            {/* Story text */}
+            <div className="space-y-5 text-[var(--text-secondary)] text-base leading-relaxed">
+              <p>
+                Ho lavorato per anni guardando altri designer produrre lavori
+                che mi facevano venire voglia di smettere.
+              </p>
+              <p>
+                Non perché fossero più bravi. Non perché avessero più
+                esperienza. Ma perché sembravano capire qualcosa che io non
+                riuscivo a vedere.
+              </p>
+              <p>
+                Passavo ore su Behance. Compravo corsi. Guardavo tutorial.
+                Eppure, ogni volta che aprivo un file nuovo, finivo nello
+                stesso posto: a spostare elementi a caso, sperando che
+                qualcosa "scattasse."
+              </p>
+              <p>
+                I clienti me lo facevano sentire. "Puoi provare qualcosa di
+                più... wow?" Oppure: "Mio nipote ha Canva, potrebbe farlo per
+                meno." Ogni presentazione era un momento di ansia pura. Non
+                perché non credessi nel mio lavoro. Ma perché{" "}
+                <strong className="text-[var(--text-primary)]">
+                  non sapevo come difenderlo
+                </strong>
+                .
+              </p>
+              <p>
+                Ho provato tutto ciò che il mercato offriva. Corsi
+                preregistrati su Skillshare. Template da Envato. Post sui
+                trend del 2024. Niente funzionava. Non perché fossi incapace,
+                ma perché nessuno mi stava insegnando la cosa giusta.
+              </p>
+
+              {/* Pivot moment */}
+              <div className="border-l-2 border-dark-goldenrod/60 pl-5 py-1 my-6">
+                <p className="text-[var(--text-primary)] font-medium italic">
+                  Poi è successa una cosa semplice, quasi banale.
+                </p>
               </div>
 
-              {/* Bio text */}
-              <div className="flex flex-col gap-5 text-[var(--text-secondary)] text-base leading-relaxed">
-                <p>
-                  Ciao, sono{" "}
-                  <strong className="text-[var(--text-primary)]">
-                    [Nome Mentor]
-                  </strong>
-                  , designer freelance con oltre 5 anni di esperienza nel
-                  mercato italiano ed europeo. Ho lavorato con brand di moda,
-                  tech startup e agenzie internazionali costruendo un portfolio
-                  che parla chiaro: specializzazione e posizionamento vincono
-                  sempre sul talento grezzo.
-                </p>
-                <p>
-                  Ho iniziato esattamente come te — senza contatti, senza un
-                  metodo, pagando prezzi da fame e perdendo clienti per
-                  proposte sbagliate. Ho impiegato{" "}
-                  <strong className="text-[var(--text-primary)]">
-                    tre anni a capire da solo
-                  </strong>{" "}
-                  ciò che oggi insegno in 90 giorni.
-                </p>
-                <p>
-                  Ho già accompagnato più di 80 designer a trasformare la loro
-                  carriera: dal primo cliente pagato fino a pacchetti da
-                  3.000€+. Il metodo funziona perché è costruito su{" "}
-                  <strong className="text-[var(--text-primary)]">
-                    casi reali, feedback diretto e zero teorie inutili
-                  </strong>
-                  .
-                </p>
-
-                {/* Credential pills */}
-                <div className="flex flex-wrap gap-2 mt-2">
-                  {[
-                    "Brand Identity",
-                    "UI/UX Design",
-                    "Freelance Strategy",
-                    "Client Acquisition",
-                    "Pricing Psychology",
-                  ].map((tag) => (
-                    <span
-                      key={tag}
-                      className="bg-shadow-grey/50 border border-dark-goldenrod/40 text-eggshell text-xs font-medium px-3 py-1 rounded-full"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
+              <p>
+                Ho smontato un progetto di un designer che ammiravo. Non per
+                copiarlo. Per capire come era costruito. E lì l'ho visto: una
+                griglia matematica precisa. Una scala tipografica intenzionale.
+                Una gerarchia visiva che guidava l'occhio senza che il lettore
+                se ne accorgesse.
+              </p>
+              <p>
+                Non era magia.{" "}
+                <strong className="text-[var(--text-primary)]">
+                  Era un sistema.
+                </strong>
+              </p>
+              <p>
+                Da quel momento ho smesso di cercare ispirazione e ho iniziato
+                a costruire struttura. Ho rifatto i miei progetti da zero,
+                applicando questi principi uno alla volta. I risultati erano
+                diversi. Non "più belli" in modo soggettivo. Più solidi. Più
+                difendibili. Più professionali.
+              </p>
+              <p>
+                I clienti hanno smesso di fare revisioni infinite. Hanno
+                iniziato a chiedermi il perché delle mie scelte, e io avevo le
+                risposte. Le tariffe sono salite. La fiducia anche.
+              </p>
+              <p>
+                <strong className="text-[var(--text-primary)]">
+                  Structural Vision Mastery
+                </strong>{" "}
+                è nato da quella scoperta. È il sistema che avrei voluto avere
+                anni fa: critiche chirurgiche sul lavoro reale, principi
+                fondamentali applicati al tuo progetto specifico, e un
+                processo che trasforma il gusto che già hai in esecuzione
+                premium.
+              </p>
+              <p>
+                Non sto insegnando un software. Sto insegnando come vedere e
+                costruire il design nel modo in cui i professionisti lo fanno
+                davvero.
+              </p>
             </div>
 
             {/* CTA inside block */}
@@ -763,7 +757,7 @@ export default function Home() {
 
         <Divider />
 
-        {/* ── BLOCK 8: THE PRODUCT ──────────────────────────────────────── */}
+        {/* ── BLOCK 8: HOW IT WORKS ─────────────────────────────────────── */}
         <section className="relative px-4 py-12 md:py-20 overflow-hidden">
           <div
             aria-hidden
@@ -774,70 +768,105 @@ export default function Home() {
             }}
           />
           <div className="relative z-10 max-w-2xl mx-auto">
-            <div className="mb-8 md:mb-12 text-center">
+            <div className="mb-10 md:mb-14 text-center">
               <p className="text-sm font-semibold uppercase tracking-widest text-dark-goldenrod mb-3">
-                Cosa Ottieni
+                Come Funziona
               </p>
               <h2 className="text-3xl sm:text-4xl font-black text-[var(--text-primary)] leading-tight">
-                La Mentorship{" "}
-                <span className="gradient-text">in Dettaglio</span>
+                Roadmap del{" "}
+                <span className="gradient-text">Percorso</span>
               </h2>
-              <p className="mt-4 text-[var(--text-secondary)] text-base max-w-lg mx-auto">
-                Non un corso pre-registrato. Un percorso vivo, costruito
-                attorno a te, con accesso diretto al mentor.
-              </p>
             </div>
 
-            {/* 2-col on mobile, 3-col on md+ */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {/* Steps */}
+            <ol className="relative space-y-0">
+              {/* Vertical connector line */}
+              <div
+                aria-hidden
+                className="absolute left-[1.625rem] top-10 bottom-10 w-px bg-dark-goldenrod/20"
+              />
+
               {[
                 {
-                  icon: <Video className="w-5 h-5" />,
-                  title: "Chiamate Settimanali",
-                  body: "Sessioni live 1-to-1 ogni settimana per analizzare i tuoi progressi, risolvere blocchi e pianificare i prossimi passi.",
+                  step: "01",
+                  icon: <Lightbulb className="w-5 h-5 text-dark-goldenrod" />,
+                  title: "Diagnosi — Troviamo il tuo punto cieco",
+                  lines: [
+                    "Analizziamo insieme il tuo lavoro attuale.",
+                    "Non per giudicare. Per trovare esattamente dove la tua esecuzione si rompe.",
+                    "Ogni designer ha un punto cieco specifico. Noi lo troviamo subito.",
+                  ],
                 },
                 {
-                  icon: <MessageSquare className="w-5 h-5" />,
-                  title: "Accesso Discord",
-                  body: "Canale privato per domande, feedback rapidi tra le chiamate e accesso alla community di altri designer in percorso.",
+                  step: "02",
+                  icon: <Layers className="w-5 h-5 text-dark-goldenrod" />,
+                  title: "Fondamenta — Installi i sistemi che i professionisti usano",
+                  lines: [
+                    "Qui impari il linguaggio invisibile del design di alto livello.",
+                    "Griglie matematiche. Gerarchia tipografica. Tensione visiva.",
+                    "Non teoria astratta. Sistemi concreti che applichi subito al tuo lavoro.",
+                  ],
                 },
                 {
-                  icon: <BookOpen className="w-5 h-5" />,
-                  title: "Materiale Esclusivo",
-                  body: "Guide, checklist e risorse operative costruite sul metodo — niente contenuti riciclati dal web.",
+                  step: "03",
+                  icon: <Pen className="w-5 h-5 text-dark-goldenrod" />,
+                  title: "Applicazione — Costruisci da zero, con intenzione",
+                  lines: [
+                    "Niente template. Niente scorciatoie.",
+                    "Prendi un progetto reale e lo costruisci usando i nuovi sistemi.",
+                    "Ogni scelta ha un perché. Ogni elemento ha una ragione precisa.",
+                  ],
                 },
                 {
-                  icon: <CheckCircle className="w-5 h-5" />,
-                  title: "Feedback Portfolio",
-                  body: "Review dettagliata del tuo portfolio esistente e supporto passo-passo per costruire quello nuovo.",
+                  step: "04",
+                  icon: <Zap className="w-5 h-5 text-dark-goldenrod" />,
+                  title: "Critica Chirurgica — Affiniamo fino al livello premium",
+                  lines: [
+                    "Sessioni live 1:1 in cui analizziamo il tuo lavoro insieme.",
+                    `Non feedback generico tipo "bel lavoro."`,
+                    `Feedback preciso: "questa gerarchia tipografica è rotta, ecco come sistemarla."`,
+                  ],
                 },
                 {
-                  icon: <FileText className="w-5 h-5" />,
-                  title: "Template & Swipe File",
-                  body: "Proposte commerciali, email di outreach e script per le call con i clienti già pronti da adattare.",
+                  step: "05",
+                  icon: <FileText className="w-5 h-5 text-dark-goldenrod" />,
+                  title: "Portfolio — Esci con lavori che parlano da soli",
+                  lines: [
+                    "Al termine delle 6 settimane hai un portfolio che dimostra un livello premium.",
+                    "Lavori che attirano clienti migliori.",
+                    "Lavori che giustificano tariffe più alte, senza dover convincere nessuno.",
+                  ],
                 },
-                {
-                  icon: <Zap className="w-5 h-5" />,
-                  title: "Supporto Illimitato",
-                  body: "Messaggi diretti senza limite di numero. Se sei bloccato tra una sessione e l'altra, sono qui.",
-                },
-              ].map(({ icon, title, body }) => (
-                <div
-                  key={title}
-                  className="card-glow rounded-2xl p-5 flex flex-col gap-3"
-                >
-                  <div className="w-10 h-10 rounded-xl bg-shadow-grey/60 flex items-center justify-center text-dark-goldenrod flex-shrink-0">
-                    {icon}
+              ].map(({ step, icon, title, lines }) => (
+                <li key={step} className="relative flex gap-5 pb-8 last:pb-0">
+                  {/* Step bubble */}
+                  <div className="flex-shrink-0 w-[3.25rem] flex flex-col items-center">
+                    <div className="w-[3.25rem] h-[3.25rem] rounded-full bg-[var(--bg-card)] border border-dark-goldenrod/40 flex items-center justify-center shadow-[0_0_16px_rgba(174,133,46,0.15)] z-10">
+                      {icon}
+                    </div>
                   </div>
-                  <p className="font-bold text-[var(--text-primary)] text-sm leading-snug">
-                    {title}
-                  </p>
-                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                    {body}
-                  </p>
-                </div>
+                  {/* Content */}
+                  <div className="pt-2 pb-2">
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-dark-goldenrod mb-1">
+                      Passo {step}
+                    </p>
+                    <h3 className="text-base font-bold text-[var(--text-primary)] mb-3 leading-snug">
+                      {title}
+                    </h3>
+                    <div className="space-y-1.5">
+                      {lines.map((line, i) => (
+                        <p
+                          key={i}
+                          className="text-sm text-[var(--text-secondary)] leading-relaxed"
+                        >
+                          {line}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </section>
 
@@ -855,12 +884,20 @@ export default function Home() {
           <div className="relative z-10 max-w-lg mx-auto">
             <div className="mb-8 text-center">
               <p className="text-sm font-semibold uppercase tracking-widest text-dark-goldenrod mb-3">
-                L&apos;Offerta
+                L&apos;Investimento
               </p>
               <h2 className="text-3xl sm:text-4xl font-black text-[var(--text-primary)] leading-tight">
-                Tutto Incluso,{" "}
-                <span className="gradient-text">Nessuna Sorpresa</span>
+                Structural Vision Mastery —{" "}
+                <span className="gradient-text">Mentorship 1:1</span>
               </h2>
+            </div>
+
+            {/* Scarcity badge */}
+            <div className="flex items-center justify-center gap-2 mb-6">
+              <div className="flex items-center gap-2 bg-dark-goldenrod/10 border border-dark-goldenrod/40 rounded-full px-4 py-2 text-sm font-semibold text-dark-goldenrod">
+                <AlertCircle className="w-4 h-4 flex-shrink-0" />
+                Iscrizioni Limitate
+              </div>
             </div>
 
             {/* Pricing card */}
@@ -874,59 +911,119 @@ export default function Home() {
               }}
             >
               <div className="bg-[var(--bg-card)] rounded-[calc(1.5rem-1px)] p-7 flex flex-col gap-6">
-                {/* Badge */}
-                <div className="inline-flex self-start items-center gap-2 bg-shadow-grey/70 border border-dark-goldenrod/50 rounded-full px-3 py-1 text-xs font-bold text-dark-goldenrod uppercase tracking-widest">
-                  <Zap className="w-3 h-3" />
-                  Più Popolare
-                </div>
-
                 {/* Price */}
-                <div className="flex items-end gap-3">
-                  <div>
-                    <p className="text-sm text-[var(--text-muted)] line-through mb-1">
-                      €497/mese
-                    </p>
-                    <div className="flex items-baseline gap-2">
-                      <span className="text-5xl font-black gradient-text leading-none">
-                        €297
-                      </span>
-                      <span className="text-[var(--text-muted)] text-base">
-                        /mese
-                      </span>
-                    </div>
+                <div>
+                  <p className="text-xs text-[var(--text-muted)] uppercase tracking-widest mb-2">
+                    Valore totale dei bonus: €2.991
+                  </p>
+                  <div className="flex items-baseline gap-3">
+                    <span className="text-5xl font-black gradient-text leading-none">
+                      €997
+                    </span>
+                    <span className="text-[var(--text-muted)] text-base">
+                      pagamento unico
+                    </span>
                   </div>
-                  <span className="mb-1 bg-amber-400/10 border border-amber-400/30 text-amber-400 text-xs font-bold px-2.5 py-1 rounded-full">
-                    -40% Lancio
-                  </span>
                 </div>
-
-                {/* Included list */}
-                <ul className="space-y-3">
-                  {[
-                    "Chiamate 1-to-1 settimanali",
-                    "Accesso Discord privato",
-                    "Materiale & guide esclusive",
-                    "Feedback portfolio illimitato",
-                    "Template proposte + script outreach",
-                    "Supporto diretto via messaggi",
-                    "Garanzia 30 giorni soddisfatti o rimborsati",
-                  ].map((item) => (
-                    <li key={item} className="flex items-center gap-3">
-                      <CheckCircle className="w-4 h-4 text-dark-goldenrod flex-shrink-0" />
-                      <span className="text-sm text-[var(--text-secondary)]">
-                        {item}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
 
                 <div className="h-px bg-white/5" />
 
+                {/* Core inclusions */}
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-widest text-[var(--text-muted)] mb-3">
+                    Incluso nel percorso
+                  </p>
+                  <ul className="space-y-3">
+                    {[
+                      "6 settimane di lavoro diretto e personale con Menny",
+                      "Design Calibration Sessions: critiche chirurgiche live 1:1",
+                      "Execution Roadmap: piano d'azione sui tuoi specifici punti deboli",
+                      "Structural Vision Toolkit: libreria su griglie, tipografia e tensione visiva",
+                    ].map((item) => (
+                      <li key={item} className="flex items-start gap-3">
+                        <CheckCircle className="w-4 h-4 text-dark-goldenrod flex-shrink-0 mt-0.5" />
+                        <span className="text-sm text-[var(--text-secondary)]">
+                          {item}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="h-px bg-white/5" />
+
+                {/* Bonuses */}
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-widest text-dark-goldenrod mb-3">
+                    Bonus inclusi
+                  </p>
+                  <ul className="space-y-3">
+                    {[
+                      {
+                        label: `Bonus 1 — "Blank Canvas" Demystifier Toolkit`,
+                        value: "€497",
+                        body: "Il sistema per non bloccarti mai davanti a una pagina bianca",
+                      },
+                      {
+                        label: "Bonus 2 — Premium Client Acquisition Method",
+                        value: "€997",
+                        body: "Come trovare clienti che pagano per il valore, non per il prezzo",
+                      },
+                      {
+                        label: "Bonus 3 — Real-World Redesign Project",
+                        value: "€1.497",
+                        body: "Un progetto reale guidato da zero a fine, per vedere il sistema in azione",
+                      },
+                      {
+                        label: "Bonus 4 — Post-Mentorship Portfolio Review",
+                        value: "",
+                        body: "Una sessione finale dopo le 6 settimane per non perdere lo slancio",
+                      },
+                    ].map(({ label, value, body }) => (
+                      <li key={label} className="flex items-start gap-3">
+                        <Sparkles className="w-4 h-4 text-dark-goldenrod flex-shrink-0 mt-0.5" />
+                        <div>
+                          <p className="text-sm font-semibold text-[var(--text-primary)] leading-snug">
+                            {label}
+                            {value && (
+                              <span className="ml-2 text-xs font-bold text-dark-goldenrod/70">
+                                (val. {value})
+                              </span>
+                            )}
+                          </p>
+                          <p className="text-xs text-[var(--text-secondary)] mt-0.5">
+                            {body}
+                          </p>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="h-px bg-white/5" />
+
+                {/* Guarantee note */}
+                <div className="flex items-start gap-3 bg-dark-goldenrod/5 border border-dark-goldenrod/20 rounded-xl p-4">
+                  <Shield className="w-4 h-4 text-dark-goldenrod flex-shrink-0 mt-0.5" />
+                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                    <strong className="text-[var(--text-primary)]">
+                      Garanzia &ldquo;Undeniable Portfolio&rdquo;:
+                    </strong>{" "}
+                    se non vedi un miglioramento dimostrabile, continuo a
+                    lavorare con te gratis per altre 2 settimane.
+                  </p>
+                </div>
+
                 {/* CTA */}
                 <div className="flex flex-col gap-3">
-                  <CtaButton label="Iscriviti Ora" fullWidth size="lg" />
+                  <CtaButton
+                    label="Inizia ora"
+                    fullWidth
+                    size="lg"
+                  />
                   <p className="text-center text-xs text-[var(--text-muted)]">
-                    Pagamento sicuro · Cancella quando vuoi · Posti limitati
+                    Pagamento sicuro · Nessun rinnovo automatico · Garanzia
+                    inclusa
                   </p>
                 </div>
               </div>
@@ -936,26 +1033,72 @@ export default function Home() {
 
         <Divider />
 
-        {/* ── BLOCK 10: WARRANTY ───────────────────────────────────────── */}
+        {/* ── BLOCK 10: GUARANTEE ──────────────────────────────────────── */}
         <section className="px-4 py-12 md:py-16">
-          <div className="max-w-lg mx-auto flex flex-col items-center text-center gap-5">
-            {/* Badge */}
-            <div className="w-20 h-20 rounded-full bg-[var(--bg-card)] border border-dark-goldenrod/30 flex items-center justify-center shadow-[0_0_30px_rgba(174,133,46,0.15)]">
-              <Shield className="w-9 h-9 text-dark-goldenrod" />
+          <div className="max-w-lg mx-auto flex flex-col items-center text-center gap-6">
+            {/* Seal badge */}
+            <div className="relative">
+              <div className="w-24 h-24 rounded-full bg-[var(--bg-card)] border-2 border-dark-goldenrod/50 flex items-center justify-center shadow-[0_0_40px_rgba(174,133,46,0.2)]">
+                <Shield className="w-10 h-10 text-dark-goldenrod" />
+              </div>
+              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-dark-goldenrod text-[#191613] text-[10px] font-black uppercase tracking-widest px-3 py-0.5 rounded-full whitespace-nowrap">
+                Garanzia 6 Settimane
+              </div>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-black text-[var(--text-primary)]">
-              Garanzia{" "}
-              <span className="gradient-text">30 Giorni</span>
-            </h2>
-            <p className="text-[var(--text-secondary)] text-base leading-relaxed max-w-md">
-              Se entro i primi 30 giorni non sei soddisfatto al 100% del
-              percorso, ti restituiamo l&apos;intero importo senza domande. Zero
-              rischi, zero burocrazia. Inizia con la sicurezza assoluta che il
-              tuo investimento è protetto.
-            </p>
+
+            <div className="pt-2">
+              <p className="text-sm font-semibold uppercase tracking-widest text-dark-goldenrod mb-3">
+                La Nostra Garanzia
+              </p>
+              <h2 className="text-2xl sm:text-3xl font-black text-[var(--text-primary)] leading-tight mb-2">
+                Garanzia{" "}
+                <span className="gradient-text">
+                  &ldquo;Undeniable Portfolio&rdquo;
+                </span>
+              </h2>
+              <p className="text-base font-medium text-[var(--text-secondary)] italic">
+                Fai il lavoro, vedi i risultati.
+              </p>
+            </div>
+
+            <div className="space-y-4 text-[var(--text-secondary)] text-base leading-relaxed text-left max-w-md">
+              <p>
+                Segui le sessioni. Applica la roadmap. Partecipa attivamente
+                alle critiche.
+              </p>
+              <p>
+                Se alla fine delle 6 settimane non hai almeno un lavoro nel
+                portfolio che è{" "}
+                <strong className="text-[var(--text-primary)]">
+                  dimostrabilmente superiore
+                </strong>{" "}
+                  a qualsiasi cosa tu abbia fatto prima... continuo a lavorare
+                  con te{" "}
+                <strong className="text-[var(--text-primary)]">
+                  gratis per altre 2 settimane
+                </strong>
+                .
+              </p>
+              <p>
+                Questa garanzia esiste per un motivo semplice. Il sistema
+                funziona quando viene applicato. E io ci metto la faccia su
+                questo.
+              </p>
+            </div>
+
+            {/* Closing line */}
+            <div className="card-glow rounded-2xl px-6 py-4 text-center max-w-sm">
+              <p className="text-base font-bold text-[var(--text-primary)]">
+                Il rischio è tutto mio.
+              </p>
+              <p className="text-sm text-[var(--text-secondary)] mt-1">
+                Hai 6 settimane per provarlo. Tu hai solo da guadagnare.
+              </p>
+            </div>
+
             <div className="flex items-center gap-2 text-sm font-semibold text-dark-goldenrod">
               <CheckCircle className="w-4 h-4" />
-              Rimborso garantito entro 48 ore dalla richiesta
+              Niente da perdere. Tutto da guadagnare.
             </div>
           </div>
         </section>
@@ -972,35 +1115,106 @@ export default function Home() {
                 "radial-gradient(ellipse at 50% 50%, #AE852E, transparent 70%)",
             }}
           />
-          <div className="relative z-10 max-w-2xl mx-auto text-center flex flex-col items-center gap-6">
-            <Sparkles className="w-8 h-8 text-dark-goldenrod" />
-            <h2 className="text-3xl sm:text-4xl font-black text-[var(--text-primary)] leading-tight">
-              Immagina Dove Sarai{" "}
-              <span className="gradient-text">Fra 90 Giorni</span>
-            </h2>
-            <div className="space-y-4 text-[var(--text-secondary)] text-base leading-relaxed max-w-xl">
-              <p>
-                Il tuo portfolio parla a una nicchia precisa. I clienti
-                giusti ti contattano e tu sai esattamente come rispondere, come
-                quotare, come chiudere.
-              </p>
-              <p>
-                Mandi la prima proposta da{" "}
-                <strong className="text-[var(--text-primary)]">
-                  professionista
-                </strong>
-                . Il cliente dice sì. Quella sera guardi il bonifico arrivare e
-                pensi: "Potevo farlo prima."
-              </p>
-              <p>
-                Questo non è un sogno lontano — è il risultato prevedibile di
-                un metodo che ha già funzionato per oltre 80 designer. L&apos;unica
-                variabile sei{" "}
-                <strong className="text-[var(--text-primary)]">tu</strong> e la
-                decisione che prendi oggi.
-              </p>
+          <div className="relative z-10 max-w-2xl mx-auto">
+            <div className="text-center mb-10 md:mb-14">
+              <Sparkles className="w-8 h-8 text-dark-goldenrod mx-auto mb-4" />
+              <h2 className="text-3xl sm:text-4xl font-black text-[var(--text-primary)] leading-tight">
+                Immagina{" "}
+                <span className="gradient-text">tra 6 settimane</span>
+              </h2>
             </div>
-            <CtaButton size="lg" />
+
+            {/* Two-column contrast layout on md+ */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10">
+              {/* Positive future */}
+              <div className="card-glow rounded-2xl p-6 space-y-4">
+                <p className="text-xs font-bold uppercase tracking-widest text-dark-goldenrod mb-1">
+                  Con il sistema
+                </p>
+                <div className="space-y-3 text-sm text-[var(--text-secondary)] leading-relaxed">
+                  <p>
+                    Apri un file nuovo. Nessun panico. Nessuna sensazione di
+                    vuoto. Sai esattamente da dove partire.
+                  </p>
+                  <p>
+                    Costruisci la griglia. Imposti la scala tipografica. Ogni
+                    elemento va dove deve andare, per una ragione precisa. Non
+                    perché{" "}
+                    <em>&ldquo;sembra giusto&rdquo;</em>... ma perché sai il
+                    perché.
+                  </p>
+                  <p>
+                    Il cliente vede il lavoro finito. Non chiede{" "}
+                    <em>&ldquo;puoi provare un&apos;altra versione?&rdquo;</em>{" "}
+                    Ti guarda e dice:{" "}
+                    <strong className="text-[var(--text-primary)]">
+                      &ldquo;Quando possiamo iniziare il prossimo
+                      progetto?&rdquo;
+                    </strong>
+                  </p>
+                  <p>
+                    Il tuo portfolio non è più una raccolta di esercizi carini.
+                    È una serie di case study che dimostrano risultati reali.
+                    I clienti ti trovano. Ti scrivono. Chiedono il tuo
+                    preventivo senza battere ciglio.
+                  </p>
+                  <p>
+                    Quella sensazione di essere un impostore? Sparita. Al suo
+                    posto c&apos;è{" "}
+                    <strong className="text-[var(--text-primary)]">
+                      autorità
+                    </strong>
+                    . La certezza che ogni scelta visiva che fai ha una
+                    struttura solida dietro.
+                  </p>
+                </div>
+              </div>
+
+              {/* Cost of inaction */}
+              <div className="card-glow rounded-2xl p-6 space-y-4 border border-white/5">
+                <p className="text-xs font-bold uppercase tracking-widest text-[var(--text-muted)] mb-1">
+                  Senza il sistema
+                </p>
+                <div className="space-y-3 text-sm text-[var(--text-secondary)] leading-relaxed">
+                  <p>
+                    Tra 6 settimane sei ancora lì. Stesso file aperto. Stessa
+                    sensazione che manca qualcosa. Stessi clienti che ti
+                    chiedono{" "}
+                    <em>&ldquo;puoi fare qualcosa di più... wow?&rdquo;</em>
+                  </p>
+                  <p>
+                    Continui a guardare i portfolio degli altri su Behance e
+                    ti chiedi cosa hanno che tu non hai. La risposta non è
+                    talento.{" "}
+                    <strong className="text-[var(--text-primary)]">
+                      È un sistema.
+                    </strong>
+                  </p>
+                  <p>
+                    Ogni giorno che passa senza impararlo è un giorno in cui
+                    qualcun altro — con lo stesso livello di talento tuo — si
+                    avvicina di più a quei clienti premium che tu vuoi.
+                  </p>
+                  <p>
+                    Il costo di non agire non è zero. È ogni progetto che
+                    potresti vincere e non vinci. Ogni tariffa che potresti
+                    alzare e non alzi. Ogni presentazione in cui esci dalla
+                    stanza{" "}
+                    <strong className="text-[var(--text-primary)]">
+                      senza la certezza di aver convinto davvero.
+                    </strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center space-y-4">
+              <p className="text-base text-[var(--text-secondary)] max-w-lg mx-auto leading-relaxed">
+                Non devi essere pronto al 100%. Devi solo smettere di
+                aspettare che le cose migliorino da sole.
+              </p>
+              <CtaButton size="lg" />
+            </div>
           </div>
         </section>
 
@@ -1009,47 +1223,91 @@ export default function Home() {
         {/* ── BLOCK 12: OBJECTIONS ─────────────────────────────────────── */}
         <section className="px-4 py-12 md:py-20">
           <div className="max-w-2xl mx-auto">
-            <div className="mb-8 md:mb-12 text-center">
+            <div className="mb-10 md:mb-14 text-center">
               <p className="text-sm font-semibold uppercase tracking-widest text-dark-goldenrod mb-3">
-                Hai Qualche Dubbio?
+                Ultime Domande
               </p>
               <h2 className="text-3xl sm:text-4xl font-black text-[var(--text-primary)] leading-tight">
-                Le Obiezioni Più Comuni —{" "}
-                <span className="gradient-text">Risposta Diretta</span>
+                Hai ancora qualche dubbio.{" "}
+                <span className="gradient-text">È normale.</span>
               </h2>
+              <p className="mt-4 text-[var(--text-secondary)] text-base max-w-lg mx-auto">
+                Ecco le domande che mi fanno più spesso, con risposte dirette.
+              </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div className="space-y-4">
               {[
                 {
-                  emoji: "⏱",
-                  title: "«Non ho tempo»",
-                  body: "Il percorso è pensato per chi lavora o studia. Bastano 5–7 ore a settimana. Le sessioni si pianificano insieme in base alla tua disponibilità. La struttura si adatta a te, non il contrario.",
+                  icon: <TrendingDown className="w-5 h-5 text-dark-goldenrod" />,
+                  q: "«Una mentorship 1:1 è troppo costosa per me adesso.»",
+                  a: [
+                    "Capisco. È una cifra reale, non una spesa piccola.",
+                    "Ma considera questo: perdere un solo cliente premium — quello che vale 5.000€ o 10.000€ — perché il tuo portfolio non convince ancora, costa più dell'intera mentorship. Il vero costo non è quello che paghi. È quello che continui a perdere ogni mese che aspetti.",
+                    `Con la garanzia "Undeniable Portfolio": se alla fine delle 6 settimane il tuo lavoro non è visibilmente migliore di qualsiasi cosa tu abbia fatto prima, continuo a lavorare con te gratis per altre 2 settimane.`,
+                  ],
+                  highlight: "Il rischio è mio, non tuo.",
                 },
                 {
-                  emoji: "🎨",
-                  title: "«Non sono abbastanza bravo»",
-                  body: "Non servono anni di esperienza. Molti degli studenti hanno iniziato da zero. Il metodo ti porta dove devi arrivare, partendo esattamente da dove sei adesso — senza scuse, senza filtri.",
+                  icon: <Clock className="w-5 h-5 text-dark-goldenrod" />,
+                  q: "«Non ho tempo per sessioni live e compiti a casa.»",
+                  a: [
+                    "Questa è la domanda giusta da farti.",
+                    "Se non hai tempo ora, non lo avrai nemmeno tra sei mesi. Il problema non è il tempo: è la priorità. La mentorship è costruita per essere intensiva ma efficiente. Niente contenuti passivi da guardare sul divano. Solo lavoro reale, sul tuo lavoro reale, con feedback chirurgico diretto.",
+                  ],
+                  highlight: "Otto settimane. Poi hai un sistema che usi per tutta la carriera.",
                 },
                 {
-                  emoji: "💸",
-                  title: "«È troppo costoso»",
-                  body: "Un solo cliente acquisito grazie al metodo ripaga l'intera mentorship. E la garanzia 30 giorni azzera il rischio. La vera domanda è: quanto ti costa ogni mese restare fermo?",
+                  icon: <AlertCircle className="w-5 h-5 text-dark-goldenrod" />,
+                  q: "«Come faccio a sapere che non è l'ennesimo corso che non funziona?»",
+                  a: [
+                    "È la preoccupazione più onesta che puoi avere.",
+                    "Hai già comprato corsi preregistrati. Hai già guardato tutorial su YouTube. Sai già che l'informazione passiva non basta. Questa non è una lezione su come usare il software. È una sessione 1:1 sul tuo file, con il tuo progetto, con un occhio esterno che ti mostra esattamente dove la griglia è rotta e perché la gerarchia tipografica non funziona.",
+                  ],
+                  highlight: "Non stai comprando contenuti. Stai comprando una diagnosi precisa e un piano per risolverla.",
                 },
-              ].map(({ emoji, title, body }) => (
+                {
+                  icon: <Shield className="w-5 h-5 text-dark-goldenrod" />,
+                  q: "«Ho paura che la critica diretta al mio lavoro distrugga la mia fiducia.»",
+                  a: [
+                    "Questa paura ha senso. E la rispetto.",
+                    `Ma pensa a cosa succede adesso: ogni volta che presenti un lavoro a un cliente, quella paura è già lì. Non scompare da sola. Una critica chirurgica non è un giudizio sul tuo talento. È una diagnosi con una soluzione chiara. "La griglia è interrotta qui" non significa "sei un cattivo designer." Significa: "ecco cosa aggiustare, ed ecco come farlo."`,
+                  ],
+                  highlight: "La fiducia non viene dall'evitare il feedback. Viene dal capire finalmente perché le cose funzionano.",
+                },
+                {
+                  icon: <TrendingUp className="w-5 h-5 text-dark-goldenrod" />,
+                  q: "«E se alla fine non riesco comunque a trovare clienti migliori?»",
+                  a: [
+                    "Capisco il dubbio. Ma separiamo le due cose.",
+                    `Il tuo problema adesso non è la ricerca clienti. È l'esecuzione. Un portfolio che non convince al livello premium è il vero blocco. Quando il tuo lavoro parla da solo, la conversazione con il cliente cambia completamente. Il Bonus 2 incluso — il "Premium Client Acquisition Method" — ti dà esattamente il metodo per trovare e attrarre i clienti giusti una volta che il tuo portfolio è pronto a riceverli.`,
+                  ],
+                  highlight: "Prima costruisci lo strumento. Poi lo usi.",
+                },
+              ].map(({ icon, q, a, highlight }) => (
                 <div
-                  key={title}
-                  className="card-glow rounded-2xl p-6 flex flex-col gap-4"
+                  key={q}
+                  className="card-glow rounded-2xl p-6 flex gap-5 items-start"
                 >
-                  <span className="text-3xl" role="img" aria-label={title}>
-                    {emoji}
-                  </span>
-                  <h3 className="font-bold text-[var(--text-primary)] text-base leading-snug">
-                    {title}
-                  </h3>
-                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                    {body}
-                  </p>
+                  <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-dark-goldenrod/15 border border-dark-goldenrod/30 flex items-center justify-center mt-0.5">
+                    {icon}
+                  </div>
+                  <div className="space-y-3">
+                    <h3 className="font-bold text-[var(--text-primary)] text-base leading-snug">
+                      {q}
+                    </h3>
+                    {a.map((line, i) => (
+                      <p
+                        key={i}
+                        className="text-sm text-[var(--text-secondary)] leading-relaxed"
+                      >
+                        {line}
+                      </p>
+                    ))}
+                    <p className="text-sm font-semibold text-dark-goldenrod">
+                      {highlight}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -1061,7 +1319,7 @@ export default function Home() {
         {/* ── BLOCK 13: FAQ ACCORDION ──────────────────────────────────── */}
         <section className="px-4 py-12 md:py-20">
           <div className="max-w-2xl mx-auto">
-            <div className="mb-8 md:mb-12 text-center">
+            <div className="mb-10 md:mb-14 text-center">
               <p className="text-sm font-semibold uppercase tracking-widest text-dark-goldenrod mb-3">
                 FAQ
               </p>
@@ -1073,32 +1331,52 @@ export default function Home() {
 
             <div className="flex flex-col gap-3">
               <FaqItem
-                question="Quanto dura la mentorship e posso cancellarmi?"
-                answer="La mentorship è mensile e puoi cancellarla in qualsiasi momento senza penali. Non ci sono contratti o vincoli a lungo termine. Molti studenti scelgono di continuare perché i risultati si moltiplicano nel tempo, ma la scelta è sempre tua."
+                question="Quanto costa la mentorship?"
+                answer="C'è un solo pacchetto disponibile, a 997 euro. Nessun upsell, nessuna sorpresa. Un prezzo, un percorso completo."
               />
               <FaqItem
-                question="Quante ore a settimana devo dedicarci?"
-                answer="Il carico minimo consigliato è di 5–7 ore settimanali, inclusa la chiamata con il mentor. Chi riesce a dedicare più tempo progredisce più velocemente, ma il programma è calibrato per chi ha una vita piena. Qualità del tempo, non quantità."
+                question="Quante persone accetti ogni mese?"
+                answer="Solo 3. La mentorship è 1:1, quindi il numero di posti è limitato per garantire la massima attenzione su ogni designer."
               />
               <FaqItem
-                question="Funziona anche se sono alle prime armi?"
-                answer="Sì. Il metodo parte da dove sei tu adesso. Abbiamo lavorato con designer che non avevano ancora un singolo cliente e li abbiamo portati a chiuderne i primi in poche settimane. L'importante è la disponibilità a seguire il percorso con costanza."
+                question="Non ho mai fatto una mentorship. Come funziona?"
+                answer="Lavoriamo insieme in sessioni live, uno a uno. Analizzo il tuo lavoro, identifico i tuoi punti ciechi e costruiamo un piano d'azione su misura per te."
               />
               <FaqItem
-                question="Come avvengono le sessioni settimanali?"
-                answer="Le chiamate si svolgono in videoconferenza (Google Meet o Zoom) e durano in media 45–60 minuti. Il giorno e l'orario vengono concordati insieme all'inizio del percorso e possono essere adattati mese per mese in base alla tua disponibilità."
+                question="E se non vedo miglioramenti concreti nel mio portfolio?"
+                answer="Continuo a lavorare con te gratuitamente per altre 2 settimane."
               />
               <FaqItem
-                question="Cosa succede se non sono soddisfatto?"
-                answer="Attivi la garanzia entro 30 giorni dall'inizio e ti rimborsiamo l'intero importo pagato, senza domande e senza burocrazia. Il rimborso viene processato entro 48 ore dalla richiesta. Il nostro obiettivo è che tu ottenga risultati — se non succede, non vogliamo i tuoi soldi."
+                question="Quanto tempo devo dedicare ogni settimana?"
+                answer="Dipende dal tuo ritmo. Ma più applichi i sistemi tra una sessione e l'altra, più velocemente vedi i risultati nel tuo lavoro."
+              />
+              <FaqItem
+                question="Questo fa per me se uso già Behance e guardo tutorial su YouTube?"
+                answer="Sì, anzi, è esattamente per te. I tutorial insegnano il software. Questa mentorship ti insegna a pensare come un designer di alto livello."
+              />
+              <FaqItem
+                question="Devo avere un certo livello di esperienza per partecipare?"
+                answer="Devi saper usare i principali strumenti di design. Non devi essere un esperto, ma devi essere pronto a lavorare sul serio."
+              />
+              <FaqItem
+                question="Cosa ricevo esattamente con i 997 euro?"
+                answer="Sessioni live 1:1, un piano d'azione personalizzato, accesso al toolkit sui sistemi fondamentali del design, e 4 bonus inclusi. Tutto quello che ti serve per colmare il gap tra il tuo gusto e la tua esecuzione."
+              />
+              <FaqItem
+                question="Ho paura di ricevere critiche al mio lavoro. È un problema?"
+                answer="No. La critica chirurgica non è un giudizio sul tuo talento. È una diagnosi precisa con una soluzione chiara. È quello che ti ha sempre mancato."
+              />
+              <FaqItem
+                question="Come faccio a iniziare?"
+                answer="Contatta Menny direttamente. I posti si esauriscono ogni mese, quindi prima lo fai, meglio è."
               />
             </div>
 
             {/* Final CTA after FAQ */}
             <div className="mt-12 flex flex-col items-center gap-3 text-center">
-              <CtaButton size="lg" />
+              <CtaButton label="Prenota il tuo posto" size="lg" />
               <p className="text-sm text-[var(--text-muted)]">
-                Ancora dubbi? Scrivimi su Instagram prima di iscriverti.
+                Ancora dubbi? Scrivimi direttamente prima di iscriverti.
               </p>
             </div>
           </div>
