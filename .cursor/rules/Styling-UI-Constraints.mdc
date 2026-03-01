@@ -1,0 +1,12 @@
+---
+alwaysApply: true
+---
+- PRIMARY ACCENT COLOR: You MUST use  Pitch Black (#191613), Eggshell (#EFEBDA) for your primary reading text (text-eggshell) and Dark Goldenrod (#AE852E) for your buttons, links, and accent highlights (bg-dark-goldenrod).
+- FORBIDDEN COLORS: Strictly avoid all Tailwind classes containing `blue`, `purple`, `indigo`, `violet`, or `fuchsia`. 
+- Keep the overall aesthetic premium, dark mode by default, and highly legible.
+
+# General
+- Always assume a Mobile-First approach for UI generation.
+
+# General
+- Always assume a Mobile-First approach for UI generation.
