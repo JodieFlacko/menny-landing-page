@@ -118,23 +118,28 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
       <button
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className="w-full flex items-center justify-between gap-4 px-6 py-5 lg:py-6 text-left min-h-[64px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dark-goldenrod focus-visible:ring-inset"
+        className="w-full flex items-start justify-between gap-4 px-6 py-5 lg:py-6 text-left min-h-[88px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dark-goldenrod focus-visible:ring-inset [&>span]:flex-1 [&>span]:min-w-0"
       >
         <span className="font-semibold text-[var(--text-primary)] text-sm sm:text-base leading-snug">
           {question}
         </span>
         <ChevronDown
           aria-hidden
-          className={`w-5 h-5 text-[var(--text-muted)] flex-shrink-0 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+          className={`w-5 h-5 text-[var(--text-muted)] flex-shrink-0 transition-transform duration-300 ease-out ${open ? "rotate-180" : ""}`}
         />
       </button>
-      {open && (
-        <div className="px-6 pb-6 border-t border-white/5">
-          <p className="text-sm text-[var(--text-secondary)] leading-relaxed pt-4">
-            {answer}
-          </p>
+      <div
+        className="grid transition-[grid-template-rows] duration-300 ease-out"
+        style={{ gridTemplateRows: open ? "1fr" : "0fr" }}
+      >
+        <div className="overflow-hidden min-h-0">
+          <div className="px-6 pb-6 border-t border-white/5">
+            <p className="text-sm text-[var(--text-secondary)] leading-relaxed pt-4">
+              {answer}
+            </p>
+          </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }
@@ -417,60 +422,54 @@ export default function Home() {
               se ti riconosci qui
             </h2>
 
-            <div className="space-y-5 md:grid md:gap-5 lg:grid-cols-3">
+            <div className="space-y-5 md:grid md:gap-5 lg:grid-cols-3 lg:items-stretch">
               {/* Persona 1 */}
-              <div className="card-glow rounded-2xl p-6 lg:p-8 flex gap-5 items-start">
-                <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-dark-goldenrod/15 border border-dark-goldenrod/30 flex items-center justify-center">
-                  <Pen className="w-5 h-5 text-dark-goldenrod" />
+              <div className="card-glow rounded-2xl p-6 lg:p-8 flex flex-col lg:h-full">
+                <div className="w-12 h-12 rounded-xl bg-dark-goldenrod/15 border border-dark-goldenrod/30 flex items-center justify-center mb-5 flex-shrink-0">
+                  <Pen className="w-6 h-6 text-dark-goldenrod" />
                 </div>
-                <div>
-                  <h3 className="text-base font-bold text-[var(--text-primary)] mb-1.5">
-                    Designer freelance con buon gusto ma esecuzione incostante
-                  </h3>
-                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                    Produci lavori che sembrano quasi professionali, ma sai che
-                    manca qualcosa. Vuoi un metodo che ti permetta di
-                    raggiungere quel livello premium ogni volta, non solo per
-                    caso.
-                  </p>
-                </div>
+                <h3 className="text-base font-bold text-[var(--text-primary)] mb-2 leading-snug">
+                  Designer freelance con buon gusto ma esecuzione incostante
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed lg:flex-1">
+                  Produci lavori che sembrano quasi professionali, ma sai che
+                  manca qualcosa. Vuoi un metodo che ti permetta di
+                  raggiungere quel livello premium ogni volta, non solo per
+                  caso.
+                </p>
               </div>
 
               {/* Persona 2 */}
-              <div className="card-glow rounded-2xl p-6 lg:p-8 flex gap-5 items-start">
-                <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-dark-goldenrod/15 border border-dark-goldenrod/30 flex items-center justify-center">
-                  <RefreshCw className="w-5 h-5 text-dark-goldenrod" />
+              <div className="card-glow rounded-2xl p-6 lg:p-8 flex flex-col lg:h-full">
+                <div className="w-12 h-12 rounded-xl bg-dark-goldenrod/15 border border-dark-goldenrod/30 flex items-center justify-center mb-5 flex-shrink-0">
+                  <RefreshCw className="w-6 h-6 text-dark-goldenrod" />
                 </div>
-                <div>
-                  <h3 className="text-base font-bold text-[var(--text-primary)] mb-1.5">
-                    Designer junior o mid-level bloccati nel ciclo delle
-                    revisioni
-                  </h3>
-                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                    I clienti continuano a chiederti modifiche senza fine e non
-                    riesci a difendere le tue scelte. Vuoi imparare a
-                    presentare il tuo lavoro con autorità e ridurre le
-                    revisioni alla radice.
-                  </p>
-                </div>
+                <h3 className="text-base font-bold text-[var(--text-primary)] mb-2 leading-snug">
+                  Designer junior o mid-level bloccati nel ciclo delle
+                  revisioni
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed lg:flex-1">
+                  I clienti continuano a chiederti modifiche senza fine e non
+                  riesci a difendere le tue scelte. Vuoi imparare a
+                  presentare il tuo lavoro con autorità e ridurre le
+                  revisioni alla radice.
+                </p>
               </div>
 
               {/* Persona 3 */}
-              <div className="card-glow rounded-2xl p-6 lg:p-8 flex gap-5 items-start">
-                <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-dark-goldenrod/15 border border-dark-goldenrod/30 flex items-center justify-center">
-                  <TrendingUp className="w-5 h-5 text-dark-goldenrod" />
+              <div className="card-glow rounded-2xl p-6 lg:p-8 flex flex-col lg:h-full">
+                <div className="w-12 h-12 rounded-xl bg-dark-goldenrod/15 border border-dark-goldenrod/30 flex items-center justify-center mb-5 flex-shrink-0">
+                  <TrendingUp className="w-6 h-6 text-dark-goldenrod" />
                 </div>
-                <div>
-                  <h3 className="text-base font-bold text-[var(--text-primary)] mb-1.5">
-                    Designer che vogliono alzare le tariffe e attirare clienti
-                    migliori
-                  </h3>
-                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                    Sei stanco di competere sul prezzo. Vuoi costruire un
-                    portfolio che parli da solo e posizionarti come partner
-                    strategico, non come esecutore di pixel.
-                  </p>
-                </div>
+                <h3 className="text-base font-bold text-[var(--text-primary)] mb-2 leading-snug">
+                  Designer che vogliono alzare le tariffe e attirare clienti
+                  migliori
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed lg:flex-1">
+                  Sei stanco di competere sul prezzo. Vuoi costruire un
+                  portfolio che parli da solo e posizionarti come partner
+                  strategico, non come esecutore di pixel.
+                </p>
               </div>
             </div>
           </div>
@@ -1354,7 +1353,7 @@ export default function Home() {
               </h2>
             </div>
 
-            <div className="flex flex-col gap-3 md:grid md:grid-cols-2 md:gap-5 md:flex-none">
+            <div className="flex flex-col gap-3 md:grid md:grid-cols-2 md:gap-5 md:flex-none md:items-start">
               <FaqItem
                 question="Quanto costa la mentorship?"
                 answer="C'è un solo pacchetto disponibile, a 997 euro. Nessun upsell, nessuna sorpresa. Un prezzo, un percorso completo."
