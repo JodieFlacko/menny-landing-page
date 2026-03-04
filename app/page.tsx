@@ -25,7 +25,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 
-const CTA_URL = "https://whop.com/checkout-placeholder";
+const CTA_URL = "https://whop.com/checkout/plan_K8Uyev9JAvKER";
 
 // ─── Reusable CTA Button ────────────────────────────────────────────────────
 function CtaButton({
