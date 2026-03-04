@@ -62,7 +62,7 @@ interface PainCardProps {
 
 function PainCard({ icon, title, body }: PainCardProps) {
   return (
-    <div className="card-glow rounded-2xl p-6 flex flex-col gap-3 min-w-[78vw] max-w-[320px] snap-start flex-shrink-0 sm:min-w-[300px]">
+    <div className="card-glow rounded-2xl p-6 lg:p-8 flex flex-col gap-3 min-w-[78vw] max-w-[320px] md:min-w-0 md:max-w-none snap-start flex-shrink-0 sm:min-w-[300px] md:flex-shrink">
       <div className="w-11 h-11 rounded-xl bg-shadow-grey/60 flex items-center justify-center text-dark-goldenrod flex-shrink-0">
         {icon}
       </div>
@@ -86,7 +86,7 @@ interface TestimonialCardProps {
 
 function TestimonialCard({ initials, name, role, body }: TestimonialCardProps) {
   return (
-    <div className="card-glow rounded-2xl p-6 flex flex-col gap-4 min-w-[78vw] max-w-[320px] snap-start flex-shrink-0 sm:min-w-[300px]">
+    <div className="card-glow rounded-2xl p-6 md:p-8 flex flex-col gap-4 min-w-[78vw] max-w-[320px] md:min-w-0 md:max-w-none snap-start flex-shrink-0 sm:min-w-[300px] md:flex-shrink">
       <div className="flex items-center gap-3">
         <div className="w-11 h-11 rounded-full bg-shadow-grey/60 border border-dark-goldenrod/40 flex items-center justify-center text-eggshell font-bold text-sm flex-shrink-0">
           {initials}
@@ -118,7 +118,7 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
       <button
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left min-h-[64px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dark-goldenrod focus-visible:ring-inset"
+        className="w-full flex items-center justify-between gap-4 px-6 py-5 lg:py-6 text-left min-h-[64px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dark-goldenrod focus-visible:ring-inset"
       >
         <span className="font-semibold text-[var(--text-primary)] text-sm sm:text-base leading-snug">
           {question}
@@ -164,7 +164,7 @@ export default function Home() {
             }}
           />
 
-          <div className="relative z-10 max-w-2xl w-full mx-auto flex flex-col items-center gap-6">
+          <div className="relative z-10 max-w-2xl md:max-w-4xl w-full mx-auto flex flex-col items-center gap-6">
             {/* Eyebrow badge */}
             <div className="inline-flex items-center gap-2 bg-shadow-grey/70 border border-dark-goldenrod/50 rounded-full px-4 py-1.5 text-sm font-medium text-eggshell">
               <Zap className="w-3.5 h-3.5" />
@@ -198,7 +198,7 @@ export default function Home() {
             </p>
 
             {/* VSL Video */}
-            <div className="w-full mt-4 rounded-2xl overflow-hidden border border-dark-goldenrod/30 shadow-[0_0_40px_rgba(174,133,46,0.15)]">
+            <div className="w-full md:max-w-3xl mt-4 rounded-2xl overflow-hidden border border-dark-goldenrod/30 shadow-[0_0_40px_rgba(174,133,46,0.15)] md:mx-auto">
               <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
                 {videoStarted ? (
                   <iframe
@@ -240,13 +240,13 @@ export default function Home() {
 
         {/* ── BLOCK 2: PROBLEM ─────────────────────────────────────────── */}
         <section className="relative px-4 py-12 md:py-20 overflow-hidden">
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-2xl md:max-w-6xl mx-auto">
             {/* Section header */}
             <div className="mb-8 md:mb-12 text-center">
               <p className="text-sm font-semibold uppercase tracking-widest text-dark-goldenrod mb-3">
                 Ti Riconosci?
               </p>
-              <h2 className="text-3xl sm:text-4xl font-black text-[var(--text-primary)] leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[var(--text-primary)] leading-tight">
                 Non è mancanza di {" "}
                 <span className="gradient-text">talento.</span>
                 <br />
@@ -260,12 +260,18 @@ export default function Home() {
                 <PainCard
                   icon={<TrendingDown className="w-5 h-5" />}
                   title="Qualcosa non funziona"
-                  body="Hai passato ore su Behance e Dribbble. Hai comprato corsi, template, pack di asset. Hai guardato tutorial su tutorial. Eppure, quando apri un file vuoto, qualcosa non funziona. Il risultato finale sembra sempre... quasi buono. Ma non abbastanza. E non sai perché."
+                  body="Hai passato ore su Behance e Dribbble. Hai comprato corsi, template, pack di asset. 
+                  Hai guardato tutorial su tutorial. Eppure, quando apri un file vuoto, qualcosa non funziona. 
+                  Il risultato finale sembra sempre... quasi buono. Ma non abbastanza. E non sai perché."
                 />
                 <PainCard
                   icon={<Clock className="w-5 h-5" />}
                   title="Non è mancanza di talento"
-                  body="Ecco la verità che nessun corso ti ha mai detto: il problema non è il tuo occhio. Il tuo gusto è già buono, forse anche ottimo. Il problema è che nessuno ti ha mai insegnato lo scheletro invisibile che regge ogni design professionale. Hai imparato a usare i software, ma non i principi che trasformano un layout in qualcosa di solido, intenzionale, premium. Stai costruendo case senza fondamenta. E lo senti."
+                  body="Ecco la verità che nessun corso ti ha mai detto: il problema non è il tuo occhio. 
+                  Il tuo gusto è già buono, forse anche ottimo. 
+                  Il problema è che nessuno ti ha mai insegnato lo scheletro invisibile che regge ogni design professionale. 
+                  Hai imparato a usare i software, ma non i principi che trasformano un layout in qualcosa di solido, intenzionale, premium. 
+                  Stai costruendo case senza fondamenta. E lo senti."
                 />
                 <PainCard
                   icon={<AlertCircle className="w-5 h-5" />}
@@ -287,7 +293,7 @@ export default function Home() {
             </div>
 
             {/* Desktop grid */}
-            <div className="hidden md:grid grid-cols-3 gap-5">
+            <div className="hidden md:grid md:grid-cols-3 gap-6 lg:gap-8">
               <PainCard
                 icon={<TrendingDown className="w-5 h-5" />}
                 title="Impari tanto, guadagni poco"
@@ -320,13 +326,13 @@ export default function Home() {
             }}
           />
 
-          <div className="relative z-10 max-w-2xl mx-auto">
+          <div className="relative z-10 max-w-2xl md:max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-shadow-grey/60 border border-dark-goldenrod/40 rounded-full px-4 py-1.5 text-sm font-medium text-eggshell mb-6">
               <Lightbulb className="w-3.5 h-3.5" />
               La Soluzione
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-black text-[var(--text-primary)] leading-tight mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[var(--text-primary)] leading-tight mb-6">
               Esiste un{" "}
               <span className="gradient-text">
                 Sistema.
@@ -399,21 +405,21 @@ export default function Home() {
             }}
           />
 
-          <div className="relative z-10 max-w-2xl mx-auto">
+          <div className="relative z-10 max-w-2xl md:max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-shadow-grey/60 border border-dark-goldenrod/40 rounded-full px-4 py-1.5 text-sm font-medium text-eggshell mb-6">
               <Sparkles className="w-3.5 h-3.5" />
               Per Chi È
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-black text-[var(--text-primary)] leading-tight mb-10">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[var(--text-primary)] leading-tight mb-10">
               Questo percorso è{" "}
               <span className="gradient-text">fatto per te</span>{" "}
               se ti riconosci qui
             </h2>
 
-            <div className="space-y-5">
+            <div className="space-y-5 md:grid md:gap-5 lg:grid-cols-3">
               {/* Persona 1 */}
-              <div className="card-glow rounded-2xl p-6 flex gap-5 items-start">
+              <div className="card-glow rounded-2xl p-6 lg:p-8 flex gap-5 items-start">
                 <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-dark-goldenrod/15 border border-dark-goldenrod/30 flex items-center justify-center">
                   <Pen className="w-5 h-5 text-dark-goldenrod" />
                 </div>
@@ -431,7 +437,7 @@ export default function Home() {
               </div>
 
               {/* Persona 2 */}
-              <div className="card-glow rounded-2xl p-6 flex gap-5 items-start">
+              <div className="card-glow rounded-2xl p-6 lg:p-8 flex gap-5 items-start">
                 <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-dark-goldenrod/15 border border-dark-goldenrod/30 flex items-center justify-center">
                   <RefreshCw className="w-5 h-5 text-dark-goldenrod" />
                 </div>
@@ -450,7 +456,7 @@ export default function Home() {
               </div>
 
               {/* Persona 3 */}
-              <div className="card-glow rounded-2xl p-6 flex gap-5 items-start">
+              <div className="card-glow rounded-2xl p-6 lg:p-8 flex gap-5 items-start">
                 <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-dark-goldenrod/15 border border-dark-goldenrod/30 flex items-center justify-center">
                   <TrendingUp className="w-5 h-5 text-dark-goldenrod" />
                 </div>
@@ -482,19 +488,19 @@ export default function Home() {
             }}
           />
 
-          <div className="relative z-10 max-w-2xl mx-auto">
+          <div className="relative z-10 max-w-2xl md:max-w-4xl mx-auto">
             <div className="mb-8 md:mb-12 text-center">
               <p className="text-sm font-semibold uppercase tracking-widest text-dark-goldenrod mb-3">
                 Cosa Ti Manca
               </p>
-              <h2 className="text-3xl sm:text-4xl font-black text-[var(--text-primary)] leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[var(--text-primary)] leading-tight">
                 Il tuo gusto è già{" "}
                 <span className="gradient-text">premium</span>. Il tuo
                 processo no.
               </h2>
             </div>
 
-            <ul className="space-y-4">
+            <ul className="space-y-4 md:grid md:grid-cols-2 md:gap-5 md:space-y-0">
               {[
                 {
                   icon: <Layers className="w-5 h-5 text-dark-goldenrod" />,
@@ -519,7 +525,7 @@ export default function Home() {
               ].map(({ icon, title, body }) => (
                 <li
                   key={title}
-                  className="card-glow rounded-2xl p-6 flex items-start gap-5"
+                  className="card-glow rounded-2xl p-6 lg:p-8 flex items-start gap-5"
                 >
                   <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-dark-goldenrod/15 border border-dark-goldenrod/30 flex items-center justify-center">
                     {icon}
@@ -550,20 +556,20 @@ export default function Home() {
             }}
           />
 
-          <div className="relative z-10 max-w-2xl mx-auto">
+          <div className="relative z-10 max-w-2xl md:max-w-4xl mx-auto">
             <div className="mb-8 md:mb-12 text-center">
               <p className="text-sm font-semibold uppercase tracking-widest text-dark-goldenrod mb-3">
                 Prove
               </p>
-              <h2 className="text-3xl sm:text-4xl font-black text-[var(--text-primary)] leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[var(--text-primary)] leading-tight">
                 Altri Designer hanno già{" "}
                 <span className="gradient-text">Fatto Questo Salto</span>
               </h2>
             </div>
 
-            {/* Testimonial cards — stacked on mobile */}
-            <div className="space-y-5">
-              <div className="card-glow rounded-2xl p-6">
+            {/* Testimonial cards — stacked on mobile, 2-col on desktop */}
+            <div className="space-y-5 md:grid md:grid-cols-2 md:gap-6 md:space-y-0">
+              <div className="card-glow rounded-2xl p-6 lg:p-8">
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-dark-goldenrod text-dark-goldenrod" />
@@ -588,7 +594,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="card-glow rounded-2xl p-6">
+              <div className="card-glow rounded-2xl p-6 lg:p-8">
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-dark-goldenrod text-dark-goldenrod" />
@@ -619,7 +625,7 @@ export default function Home() {
               <p className="text-xs font-semibold uppercase tracking-widest text-[var(--text-muted)] text-center mb-6">
                 Brand e clienti con cui ho collaborato
               </p>
-              <div className="flex flex-wrap items-center justify-center gap-6">
+              <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
                 {["Brand A", "Brand B", "Brand C", "Brand D"].map((name) => (
                   <div
                     key={name}
@@ -647,20 +653,20 @@ export default function Home() {
             }}
           />
 
-          <div className="relative z-10 max-w-2xl mx-auto">
+          <div className="relative z-10 max-w-2xl md:max-w-4xl mx-auto">
             <div className="mb-8">
               <div className="inline-flex items-center gap-2 bg-shadow-grey/60 border border-dark-goldenrod/40 rounded-full px-4 py-1.5 text-sm font-medium text-eggshell mb-6">
                 <Award className="w-3.5 h-3.5" />
                 La Mia Storia
               </div>
-              <h2 className="text-3xl sm:text-4xl font-black text-[var(--text-primary)] leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[var(--text-primary)] leading-tight">
                 Come Ho Capito Che Il Problema{" "}
                 <span className="gradient-text">Non Era Il Talento</span>
               </h2>
             </div>
 
             {/* Image placeholder */}
-            <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-dark-goldenrod/30 shadow-[0_0_40px_rgba(174,133,46,0.12)] mb-8">
+            <div className="relative w-full md:max-w-2xl aspect-video rounded-2xl overflow-hidden border border-dark-goldenrod/30 shadow-[0_0_40px_rgba(174,133,46,0.12)] mb-8 md:mx-auto">
               <div className="absolute inset-0 bg-[var(--bg-card)] flex flex-col items-center justify-center gap-3">
                 <div className="w-16 h-16 rounded-full bg-shadow-grey/70 border border-dark-goldenrod/40 flex items-center justify-center">
                   <span className="text-2xl font-black text-eggshell select-none">
@@ -786,19 +792,19 @@ export default function Home() {
                 "radial-gradient(ellipse at 50% 0%, #AE852E, transparent 70%)",
             }}
           />
-          <div className="relative z-10 max-w-2xl mx-auto">
+          <div className="relative z-10 max-w-2xl md:max-w-4xl mx-auto">
             <div className="mb-10 md:mb-14 text-center">
               <p className="text-sm font-semibold uppercase tracking-widest text-dark-goldenrod mb-3">
                 Come Funziona
               </p>
-              <h2 className="text-3xl sm:text-4xl font-black text-[var(--text-primary)] leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[var(--text-primary)] leading-tight">
                 Roadmap del{" "}
                 <span className="gradient-text">Percorso</span>
               </h2>
             </div>
 
-            {/* Steps */}
-            <ol className="relative space-y-0">
+            {/* Steps — centered on desktop for better readability */}
+            <ol className="relative space-y-0 md:max-w-2xl md:mx-auto">
               {/* Vertical connector line */}
               <div
                 aria-hidden
@@ -900,12 +906,12 @@ export default function Home() {
               background: "radial-gradient(circle, #AE852E, transparent 65%)",
             }}
           />
-          <div className="relative z-10 max-w-lg mx-auto">
+          <div className="relative z-10 max-w-lg md:max-w-xl mx-auto">
             <div className="mb-8 text-center">
               <p className="text-sm font-semibold uppercase tracking-widest text-dark-goldenrod mb-3">
                 L&apos;Investimento
               </p>
-              <h2 className="text-3xl sm:text-4xl font-black text-[var(--text-primary)] leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[var(--text-primary)] leading-tight">
                 Structural Vision Mastery —{" "}
                 <span className="gradient-text">Mentorship 1:1</span>
               </h2>
@@ -1054,7 +1060,7 @@ export default function Home() {
 
         {/* ── BLOCK 10: GUARANTEE ──────────────────────────────────────── */}
         <section className="px-4 py-12 md:py-16">
-          <div className="max-w-lg mx-auto flex flex-col items-center text-center gap-6">
+          <div className="max-w-lg md:max-w-xl mx-auto flex flex-col items-center text-center gap-6">
             {/* Seal badge */}
             <div className="relative">
               <div className="w-24 h-24 rounded-full bg-[var(--bg-card)] border-2 border-dark-goldenrod/50 flex items-center justify-center shadow-[0_0_40px_rgba(174,133,46,0.2)]">
@@ -1134,19 +1140,19 @@ export default function Home() {
                 "radial-gradient(ellipse at 50% 50%, #AE852E, transparent 70%)",
             }}
           />
-          <div className="relative z-10 max-w-2xl mx-auto">
+          <div className="relative z-10 max-w-2xl md:max-w-5xl mx-auto">
             <div className="text-center mb-10 md:mb-14">
               <Sparkles className="w-8 h-8 text-dark-goldenrod mx-auto mb-4" />
-              <h2 className="text-3xl sm:text-4xl font-black text-[var(--text-primary)] leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[var(--text-primary)] leading-tight">
                 Immagina{" "}
                 <span className="gradient-text">tra 6 settimane</span>
               </h2>
             </div>
 
             {/* Two-column contrast layout on md+ */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 mb-10">
               {/* Positive future */}
-              <div className="card-glow rounded-2xl p-6 space-y-4">
+              <div className="card-glow rounded-2xl p-6 lg:p-8 space-y-4">
                 <p className="text-xs font-bold uppercase tracking-widest text-dark-goldenrod mb-1">
                   Con il sistema
                 </p>
@@ -1190,7 +1196,7 @@ export default function Home() {
               </div>
 
               {/* Cost of inaction */}
-              <div className="card-glow rounded-2xl p-6 space-y-4 border border-white/5">
+              <div className="card-glow rounded-2xl p-6 lg:p-8 space-y-4 border border-white/5">
                 <p className="text-xs font-bold uppercase tracking-widest text-[var(--text-muted)] mb-1">
                   Senza il sistema
                 </p>
@@ -1241,12 +1247,12 @@ export default function Home() {
 
         {/* ── BLOCK 12: OBJECTIONS ─────────────────────────────────────── */}
         <section className="px-4 py-12 md:py-20">
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-2xl md:max-w-4xl mx-auto">
             <div className="mb-10 md:mb-14 text-center">
               <p className="text-sm font-semibold uppercase tracking-widest text-dark-goldenrod mb-3">
                 Ultime Domande
               </p>
-              <h2 className="text-3xl sm:text-4xl font-black text-[var(--text-primary)] leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[var(--text-primary)] leading-tight">
                 Hai ancora qualche dubbio.{" "}
                 <span className="gradient-text">È normale.</span>
               </h2>
@@ -1306,7 +1312,7 @@ export default function Home() {
               ].map(({ icon, q, a, highlight }) => (
                 <div
                   key={q}
-                  className="card-glow rounded-2xl p-6 flex gap-5 items-start"
+                  className="card-glow rounded-2xl p-6 lg:p-8 flex gap-5 items-start"
                 >
                   <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-dark-goldenrod/15 border border-dark-goldenrod/30 flex items-center justify-center mt-0.5">
                     {icon}
@@ -1337,18 +1343,18 @@ export default function Home() {
 
         {/* ── BLOCK 13: FAQ ACCORDION ──────────────────────────────────── */}
         <section className="px-4 py-12 md:py-20">
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-2xl md:max-w-5xl mx-auto">
             <div className="mb-10 md:mb-14 text-center">
               <p className="text-sm font-semibold uppercase tracking-widest text-dark-goldenrod mb-3">
                 FAQ
               </p>
-              <h2 className="text-3xl sm:text-4xl font-black text-[var(--text-primary)] leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[var(--text-primary)] leading-tight">
                 Domande{" "}
                 <span className="gradient-text">Frequenti</span>
               </h2>
             </div>
 
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 md:grid md:grid-cols-2 md:gap-5 md:flex-none">
               <FaqItem
                 question="Quanto costa la mentorship?"
                 answer="C'è un solo pacchetto disponibile, a 997 euro. Nessun upsell, nessuna sorpresa. Un prezzo, un percorso completo."
